@@ -29,10 +29,10 @@ func MergeSortStep(arr []int, l int, r int) {
 				j++
 			}
 
-			if l == r {
-				copy(arr[left:l], help)
+			if i == r {
+				copy(arr[left:i], help)
 			} else {
-				copy(arr[left:r], help)
+				copy(arr[left:j], help)
 			}
 			left, right = left+step*2, right+step*2
 		}
